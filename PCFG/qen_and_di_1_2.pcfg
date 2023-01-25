@@ -1,0 +1,6 @@
+# all channels raw:
+1=ch_raw,fmt=AqB1
+5=ch_bf,0x00000001,fmt=DI_1
+5=ch_bf,0x00000002,fmt=DI_2
+
+
