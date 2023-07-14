@@ -1,11 +1,11 @@
 # all channels raw:
+# valid for 2xAqB, X,Y
 #1,2,10=ch_raw
 #1,2,10=ch_raw,fmt=XX{}
 1=ch_raw,fmt=AqB1
-3=ch_raw,fmt=AqB2
-#8=ch_bf,0x70000000,fmt=TAIs
-#8=ch_bf,0x0fffffff,fmt=TAIbf
-#8=ch_taiv
+8=ch_bf,0x70000000,fmt=TAI_secs
+8=ch_bf,0x0fffffff,fmt=TAI_ticks
+8=ch_taiv
 #7=ch_bf,0x0000003f,fmt=DI6
 5=ch_bf,0x00000001,fmt=DI_1
 5=ch_bf,0x00000002,fmt=DI_2

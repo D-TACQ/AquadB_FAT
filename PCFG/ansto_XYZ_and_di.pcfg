@@ -1,0 +1,16 @@
+# 3 DI422 AquadB's, DI, SPAD3
+1=ch_raw,fmt=AqBX
+3=ch_raw,fmt=AqBY
+5=ch_raw,fmt=AqBZ
+#7=ch_bf,0x0000003f,fmt=DI6
+7=ch_bf,0x00000001,fmt=DI_1
+7=ch_bf,0x00000002,fmt=DI_2
+8=ch_raw,fmt=SAMPLE
+9=ch_raw,fmt=USEC
+10=ch_bf,0x70000000,fmt=TAI_secs
+10=ch_bf,0x0fffffff,fmt=TAI_ticks
+
+
+
+
+

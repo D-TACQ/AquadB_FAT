@@ -18,7 +18,6 @@ if len(sys.argv) == 3:
     UUT = sys.argv[1]
     D_AQB = format("d{}".format(int(sys.argv[2])+1))
 
-
 root = "{}:{}:PPW".format(UUT, SITE)
 
 def pvput(suffix, value):
@@ -41,12 +40,12 @@ for dx in (1, 2, 3, 4, 5, 6):
     pvput(":{}:TRG:DX".format(dx),     "d0" if dx==2 else D_AQB)    
     pvput(":{}:TRG:SENSE".format(dx),  "rising")
 
-    pvput(":{}:REPS".format(dx),       1000 if dx==2 else 1)
+    pvput(":{}:REPS".format(dx),       20 if dx==2 else 1)
 
     pvput(":{}:PULSE".format(dx),      "INIT_LO")
-    pvput(":{}:PULSE:DELAY".format(dx), 0)
-    pvput(":{}:PULSE:WIDTH".format(dx), 0.00125) # 1.25 us
-    pvput(":{}:PULSE:PERIOD".format(dx),     0.05 if dx==2 else 0.001275)
+    pvput(":{}:PULSE:DELAY".format(dx),   1)
+    pvput(":{}:PULSE:WIDTH".format(dx),   20e-6 if dx==2 else 4e-6)
+    pvput(":{}:PULSE:PERIOD".format(dx), 4e-3 if dx==2 else 6e-6)
 
         
 epics.caput(dioen, 1)

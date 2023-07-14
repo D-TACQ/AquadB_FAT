@@ -1,4 +1,5 @@
 # all channels raw:
+# valid for 2xAqB, X,Y
 #1,2,10=ch_raw
 #1,2,10=ch_raw,fmt=XX{}
 1=ch_raw,fmt=AqB1
